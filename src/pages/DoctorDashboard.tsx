@@ -12,7 +12,10 @@ import {
     Square,
     UserMinus,
     UserCheck,
-    AlertTriangle
+    AlertTriangle,
+    X,
+    Check,
+    Stethoscope
 } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
@@ -23,6 +26,11 @@ const DoctorDashboard = () => {
         label: 'Available',
         color: 'green'
     });
+
+    const [showSurgeryModal, setShowSurgeryModal] = useState(false);
+    const [surgeryType, setSurgeryType] = useState('');
+    const [duration, setDuration] = useState(60);
+    const [notification, setNotification] = useState<string | null>(null);
 
     const sidebarItems = [
         { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard' },
@@ -40,6 +48,25 @@ const DoctorDashboard = () => {
 
     const updateStatus = (label: string, color: string) => {
         setStatus({ label, color });
+        if (label === 'Available') {
+            setNotification(null);
+        }
+    };
+
+    const handleSurgerySubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        const now = new Date();
+        const endTime = new Date(now.getTime() + duration * 60000);
+        const formattedTime = endTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        setStatus({ label: 'In Surgery', color: 'red' });
+        setNotification(`Status updated to In Surgery until ${formattedTime}`);
+        setShowSurgeryModal(false);
+        setSurgeryType('');
+
+        // Clear notification after 10 seconds or when status changes
+        // For now we keep it visible as long as they are in surgery
     };
 
     return (
@@ -48,6 +75,13 @@ const DoctorDashboard = () => {
             <div className="main-wrapper">
                 <Header title="Doctor Dashboard" />
                 <main className="content">
+                    {notification && (
+                        <div className="notification-banner">
+                            <Check size={20} />
+                            <span>{notification}</span>
+                        </div>
+                    )}
+
                     <div className="dashboard-header-section">
                         <div className="welcome-text">
                             <h2>Welcome Dr. Sabith</h2>
@@ -60,7 +94,7 @@ const DoctorDashboard = () => {
                     </div>
 
                     <div className="action-grid">
-                        <button className="action-btn" onClick={() => updateStatus('In Surgery', 'red')}>
+                        <button className="action-btn" onClick={() => setShowSurgeryModal(true)}>
                             <Play color="#10b981" />
                             <span>Start Surgery</span>
                         </button>
@@ -118,6 +152,64 @@ const DoctorDashboard = () => {
                     </div>
                 </main>
             </div>
+
+            {/* Surgery Modal */}
+            {showSurgeryModal && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h3>Start New Surgery</h3>
+                            <button className="close-btn" onClick={() => setShowSurgeryModal(false)}>
+                                <X size={20} />
+                            </button>
+                        </div>
+                        <form onSubmit={handleSurgerySubmit}>
+                            <div className="modal-body">
+                                <div className="auth-form">
+                                    <div className="input-group">
+                                        <label>Surgery Type</label>
+                                        <div className="input-wrapper">
+                                            <Stethoscope size={20} className="input-icon" />
+                                            <input
+                                                type="text"
+                                                className="full-width"
+                                                placeholder="e.g. Appendectomy"
+                                                value={surgeryType}
+                                                onChange={(e) => setSurgeryType(e.target.value)}
+                                                required
+                                                style={{ paddingLeft: '42px' }}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="input-group">
+                                        <label>Expected Duration (minutes)</label>
+                                        <div className="input-wrapper">
+                                            <Clock size={20} className="input-icon" />
+                                            <input
+                                                type="number"
+                                                className="full-width"
+                                                placeholder="60"
+                                                value={duration}
+                                                onChange={(e) => setDuration(parseInt(e.target.value) || 0)}
+                                                required
+                                                style={{ paddingLeft: '42px' }}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn-ghost" onClick={() => setShowSurgeryModal(false)}>
+                                    Cancel
+                                </button>
+                                <button type="submit" className="btn-primary">
+                                    Confirm Surgery
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
