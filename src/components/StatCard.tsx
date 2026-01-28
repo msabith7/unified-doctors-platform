@@ -7,7 +7,7 @@ interface StatCardProps {
     color: string;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ label, value, icon: Icon, color }) => (
+const StatCard = ({ label, value, icon: Icon, color }: StatCardProps) => (
     <div className="stat-card">
         <div className="stat-info">
             <div className="label">{label}</div>

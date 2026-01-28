@@ -13,7 +13,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
-        <Route path="/patient-home" element={<PatientDashboard />} />
+        <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         {/* Redirect root to login for now */}
         <Route path="/" element={<Navigate to="/login" replace />} />

@@ -8,7 +8,7 @@ const Register = () => {
 
     const handleRegister = (e: React.FormEvent) => {
         e.preventDefault();
-        navigate('/dashboard');
+        navigate('/login');
     };
 
     return (

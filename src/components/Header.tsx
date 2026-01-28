@@ -1,11 +1,10 @@
-import React from 'react';
 import { Search, UserCircle } from 'lucide-react';
 
 interface HeaderProps {
     title: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ title }) => (
+const Header = ({ title }: HeaderProps) => (
     <header className="header">
         <div className="header-title">
             <h1>{title}</h1>

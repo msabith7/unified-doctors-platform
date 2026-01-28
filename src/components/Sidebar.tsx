@@ -12,7 +12,7 @@ interface SidebarProps {
     onItemClick?: (id: string) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ items, activeId, onItemClick }) => (
+const Sidebar = ({ items, activeId, onItemClick }: SidebarProps) => (
     <div className="sidebar">
         <div className="logo-section">
             <Stethoscope size={28} />

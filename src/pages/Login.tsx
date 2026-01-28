@@ -16,7 +16,7 @@ const Login = () => {
         } else if (role === 'Admin') {
             navigate('/admin-dashboard');
         } else {
-            navigate('/patient-home');
+            navigate('/patient-dashboard');
         }
     };
 
