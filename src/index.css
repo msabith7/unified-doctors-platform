@@ -1312,3 +1312,156 @@ td {
 .back-btn-top:hover {
   color: var(--primary-blue);
 } 
+
+/* Booking Screen Styles */
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.doctor-summary-card {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+  border: 1px solid var(--border);
+}
+
+.summary-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.summary-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.booking-form-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-size: 1.125rem;
+}
+
+.date-grid {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.date-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.date-chip {
+  flex: 0 0 80px;
+  padding: 16px 8px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.date-chip.active {
+  background: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.date-chip .day-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.date-chip .day-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.slot-chip {
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slot-chip:hover:not(.unavailable) {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background: var(--bg-blue);
+}
+
+.slot-chip.active {
+  background: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+}
+
+.slot-chip.unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f1f5f9;
+  text-decoration: line-through;
+}
+
+.reason-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  outline: none;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.reason-textarea:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+} 

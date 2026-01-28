@@ -6,6 +6,7 @@ import DoctorAppointments from './pages/DoctorAppointments';
 import PatientDashboard from './pages/PatientDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import DoctorDetails from './pages/DoctorDetails';
+import BookAppointment from './pages/BookAppointment';
 import './index.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/doctor-appointments" element={<DoctorAppointments />} />
         <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/doctor/:id" element={<DoctorDetails />} />
+        <Route path="/book-appointment/:id" element={<BookAppointment />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         {/* Redirect root to login for now */}
         <Route path="/" element={<Navigate to="/login" replace />} />

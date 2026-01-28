@@ -115,7 +115,12 @@ const DoctorDetails = () => {
                                 </div>
                             </div>
 
-                            <button className="btn-primary full-width" style={{ padding: '18px', fontSize: '1.125rem' }} disabled={!doctor.available}>
+                            <button
+                                className="btn-primary full-width"
+                                style={{ padding: '18px', fontSize: '1.125rem' }}
+                                disabled={!doctor.available}
+                                onClick={() => navigate(`/book-appointment/${doctor.id}`)}
+                            >
                                 <Calendar size={22} />
                                 {doctor.available ? 'Confirm Booking' : 'Not Available'}
                             </button>
