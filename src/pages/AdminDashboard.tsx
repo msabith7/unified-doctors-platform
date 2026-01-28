@@ -1,4 +1,4 @@
-import { LayoutDashboard, Users, UserCheck, Activity, Calendar, Stethoscope, BarChart2, Settings } from 'lucide-react';
+import { LayoutDashboard, Users, UserCheck, Activity, Calendar, Stethoscope, BarChart2, Settings, Building2, ScrollText } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import StatCard from '../components/StatCard';
@@ -6,7 +6,9 @@ import StatCard from '../components/StatCard';
 const AdminDashboard = () => {
     const sidebarItems = [
         { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard', path: '/admin-dashboard' },
-        { icon: UserCheck, label: 'Manage Doctors', id: 'doctors', path: '#' },
+        { icon: Building2, label: 'Hospital Management', id: 'hospitals', path: '/admin/hospitals' },
+        { icon: UserCheck, label: 'Manage Doctors', id: 'doctors', path: '/admin/doctors' },
+        { icon: ScrollText, label: 'Status Logs', id: 'logs', path: '/admin/logs' },
         { icon: Users, label: 'Manage Users', id: 'users', path: '#' },
         { icon: BarChart2, label: 'Reports', id: 'reports', path: '#' },
         { icon: Settings, label: 'System Settings', id: 'settings', path: '#' },

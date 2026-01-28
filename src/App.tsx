@@ -6,6 +6,9 @@ import DoctorAppointments from './pages/DoctorAppointments';
 import DoctorProfile from './pages/DoctorProfile';
 import PatientDashboard from './pages/PatientDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import HospitalManagement from './pages/HospitalManagement';
+import DoctorManagement from './pages/DoctorManagement';
+import StatusLogs from './pages/StatusLogs';
 import DoctorDetails from './pages/DoctorDetails';
 import BookAppointment from './pages/BookAppointment';
 import MyAppointments from './pages/MyAppointments';
@@ -25,6 +28,9 @@ function App() {
         <Route path="/book-appointment/:id" element={<BookAppointment />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/hospitals" element={<HospitalManagement />} />
+        <Route path="/admin/doctors" element={<DoctorManagement />} />
+        <Route path="/admin/logs" element={<StatusLogs />} />
         {/* Redirect root to login for now */}
         <Route path="/" element={<Navigate to="/login" replace />} />
       </Routes>
