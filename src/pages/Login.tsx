@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Stethoscope, Mail, Lock, Phone, ArrowRight, User, ShieldCheck, HeartPulse } from 'lucide-react';
+import { Stethoscope, Mail, Lock, ArrowRight, User, ShieldCheck, HeartPulse } from 'lucide-react';
 
 const Login = () => {
     const [role, setRole] = useState('Patient');
@@ -10,8 +10,14 @@ const Login = () => {
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulate login
-        navigate('/dashboard');
+        // Role-based redirection logic
+        if (role === 'Doctor') {
+            navigate('/doctor-dashboard');
+        } else if (role === 'Admin') {
+            navigate('/admin-dashboard');
+        } else {
+            navigate('/patient-home');
+        }
     };
 
     return (
