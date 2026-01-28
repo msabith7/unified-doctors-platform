@@ -1,5 +1,6 @@
 import { Home, Search, Heart, FileText, Settings, Calendar, User, Activity, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import StatCard from '../components/StatCard';
@@ -10,11 +11,11 @@ const PatientDashboard = () => {
     const [hospital, setHospital] = useState('All');
 
     const sidebarItems = [
-        { icon: Home, label: 'Home', id: 'home' },
-        { icon: Search, label: 'Find a Doctor', id: 'find' },
-        { icon: Heart, label: 'My Health', id: 'health' },
-        { icon: FileText, label: 'Records', id: 'records' },
-        { icon: Settings, label: 'Settings', id: 'settings' },
+        { icon: Home, label: 'Home', id: 'home', path: '/patient-dashboard' },
+        { icon: Search, label: 'Find a Doctor', id: 'find', path: '#' },
+        { icon: Heart, label: 'My Health', id: 'health', path: '#' },
+        { icon: FileText, label: 'Records', id: 'records', path: '#' },
+        { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 
     const upcoming = [
@@ -90,7 +91,7 @@ const PatientDashboard = () => {
                             </h2>
                             <div className="doctor-results-grid">
                                 {filteredDoctors.map(doc => (
-                                    <div key={doc.id} className="doctor-card">
+                                    <Link to={`/doctor/${doc.id}`} key={doc.id} className="doctor-card" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <div className="doctor-card-info">
                                             <div className="doctor-main-info">
                                                 <h3>{doc.name}</h3>
@@ -120,7 +121,7 @@ const PatientDashboard = () => {
                                         <button className="book-btn" disabled={!doc.available}>
                                             {doc.available ? 'Book Appointment' : 'Not Available Today'}
                                         </button>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

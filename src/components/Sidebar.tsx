@@ -1,18 +1,19 @@
 import { type LucideIcon, Stethoscope } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 interface SidebarItem {
     icon: LucideIcon;
     label: string;
     id: string;
+    path: string;
 }
 
 interface SidebarProps {
     items: SidebarItem[];
     activeId: string;
-    onItemClick?: (id: string) => void;
 }
 
-const Sidebar = ({ items, activeId, onItemClick }: SidebarProps) => (
+const Sidebar = ({ items }: SidebarProps) => (
     <div className="sidebar">
         <div className="logo-section">
             <Stethoscope size={28} />
@@ -20,14 +21,14 @@ const Sidebar = ({ items, activeId, onItemClick }: SidebarProps) => (
         </div>
         <nav className="nav-links">
             {items.map((item) => (
-                <div
+                <NavLink
                     key={item.id}
-                    className={`nav-item ${activeId === item.id ? 'active' : ''}`}
-                    onClick={() => onItemClick?.(item.id)}
+                    to={item.path}
+                    className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
                 >
                     <item.icon size={20} />
                     {item.label}
-                </div>
+                </NavLink>
             ))}
         </nav>
     </div>

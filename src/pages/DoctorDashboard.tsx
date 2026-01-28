@@ -33,11 +33,11 @@ const DoctorDashboard = () => {
     const [notification, setNotification] = useState<string | null>(null);
 
     const sidebarItems = [
-        { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard' },
-        { icon: Calendar, label: 'My Schedule', id: 'schedule' },
-        { icon: Users, label: 'Patients', id: 'patients' },
-        { icon: MessageSquare, label: 'Consultations', id: 'consultations' },
-        { icon: Settings, label: 'Settings', id: 'settings' },
+        { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard', path: '/doctor-dashboard' },
+        { icon: Calendar, label: 'Appointments', id: 'appointments', path: '/doctor-appointments' },
+        { icon: Users, label: 'Patients', id: 'patients', path: '#' },
+        { icon: MessageSquare, label: 'Consultations', id: 'consultations', path: '#' },
+        { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 
     const appointments = [
