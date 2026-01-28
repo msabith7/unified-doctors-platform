@@ -15,7 +15,8 @@ import {
     AlertTriangle,
     X,
     Check,
-    Stethoscope
+    Stethoscope,
+    UserCircle
 } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
@@ -37,6 +38,7 @@ const DoctorDashboard = () => {
         { icon: Calendar, label: 'Appointments', id: 'appointments', path: '/doctor-appointments' },
         { icon: Users, label: 'Patients', id: 'patients', path: '#' },
         { icon: MessageSquare, label: 'Consultations', id: 'consultations', path: '#' },
+        { icon: UserCircle, label: 'Profile', id: 'profile', path: '/doctor-profile' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 

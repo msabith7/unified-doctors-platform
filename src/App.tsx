@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import DoctorDashboard from './pages/DoctorDashboard';
 import DoctorAppointments from './pages/DoctorAppointments';
+import DoctorProfile from './pages/DoctorProfile';
 import PatientDashboard from './pages/PatientDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import DoctorDetails from './pages/DoctorDetails';
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/doctor-appointments" element={<DoctorAppointments />} />
+        <Route path="/doctor-profile" element={<DoctorProfile />} />
         <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/doctor/:id" element={<DoctorDetails />} />
         <Route path="/book-appointment/:id" element={<BookAppointment />} />
