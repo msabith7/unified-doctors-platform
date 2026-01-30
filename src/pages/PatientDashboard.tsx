@@ -54,7 +54,7 @@ const PatientDashboard = () => {
                 <Header title="Patient Home" />
                 <main className="content">
                     <div className="dashboard-grid">
-                        <StatCard label="Upcoming" value="2" icon={Calendar} color="#2563eb" />
+                        <StatCard label="Upcoming" value="2" icon={Calendar} color="var(--primary)" />
                         <StatCard label="Health Score" value="92%" icon={Activity} color="#10b981" />
                         <StatCard label="Prescriptions" value="3" icon={FileText} color="#6366f1" />
                         <StatCard label="Doctors Seen" value="12" icon={User} color="#f59e0b" />
@@ -105,7 +105,7 @@ const PatientDashboard = () => {
                                                 </div>
                                             </div>
                                             <div className="doctor-specialty-badge">
-                                                <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: 'var(--bg-blue)', borderRadius: '4px', color: 'var(--primary-blue)', fontWeight: '600' }}>
+                                                <span style={{ fontSize: '0.75rem', padding: '4px 8px', background: 'var(--primary-light)', borderRadius: '4px', color: 'var(--primary)', fontWeight: '600' }}>
                                                     {doc.specialty}
                                                 </span>
                                             </div>
