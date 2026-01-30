@@ -36,7 +36,7 @@ const DoctorDashboard = () => {
     const sidebarItems = [
         { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard', path: '/doctor-dashboard' },
         { icon: Calendar, label: 'Appointments', id: 'appointments', path: '/doctor-appointments' },
-        { icon: Users, label: 'Patients', id: 'patients', path: '#' },
+        { icon: Users, label: 'Patients', id: 'patients', path: '/doctor-patients' },
         { icon: MessageSquare, label: 'Consultations', id: 'consultations', path: '/doctor-consultations' },
         { icon: UserCircle, label: 'Profile', id: 'profile', path: '/doctor-profile' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },

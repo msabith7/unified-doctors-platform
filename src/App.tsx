@@ -4,6 +4,9 @@ import Register from './pages/Register';
 import DoctorDashboard from './pages/DoctorDashboard';
 import DoctorAppointments from './pages/DoctorAppointments';
 import DoctorProfile from './pages/DoctorProfile';
+import DoctorPatients from './pages/DoctorPatients';
+import DoctorPatientPrescriptions from './pages/DoctorPatientPrescriptions';
+import DoctorPatientReports from './pages/DoctorPatientReports';
 import ConsultationLog from './pages/ConsultationLog';
 import PatientDashboard from './pages/PatientDashboard';
 import HospitalDashboard from './pages/HospitalDashboard';
@@ -29,6 +32,9 @@ function App() {
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/doctor-appointments" element={<DoctorAppointments />} />
         <Route path="/doctor-profile" element={<DoctorProfile />} />
+        <Route path="/doctor-patients" element={<DoctorPatients />} />
+        <Route path="/doctor-patients/:patientId/prescriptions" element={<DoctorPatientPrescriptions />} />
+        <Route path="/doctor-patients/:patientId/reports" element={<DoctorPatientReports />} />
         <Route path="/doctor-consultations" element={<ConsultationLog />} />
         <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/doctor/:id" element={<DoctorDetails />} />

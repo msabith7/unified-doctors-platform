@@ -1547,6 +1547,160 @@ td {
   padding-top: 4px;
 }
 
+/* Doctor – My Patients */
+.doctor-patients-page {
+  max-width: 960px;
+}
+
+.doctor-patients-intro {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  margin: 0 0 24px 0;
+}
+
+.doctor-patients-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.doctor-patient-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.2s;
+}
+
+.doctor-patient-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.doctor-patient-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.doctor-patient-reason {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.doctor-patient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.doctor-patient-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-patient-detail-item .icon {
+  color: var(--primary-blue);
+}
+
+.doctor-patient-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-doctor-patient {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.btn-doctor-patient.btn-prescriptions {
+  background: var(--bg-blue);
+  color: var(--primary-blue);
+  border: 1px solid #dbeafe;
+}
+
+.btn-doctor-patient.btn-prescriptions:hover {
+  background: #dbeafe;
+  border-color: var(--primary-blue);
+}
+
+.btn-doctor-patient.btn-reports {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.btn-doctor-patient.btn-reports:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+}
+
+/* Doctor – Patient Prescriptions / Reports (detail pages) */
+.doctor-patient-detail-page {
+  max-width: 720px;
+}
+
+.doctor-patient-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.doctor-patient-back:hover {
+  text-decoration: underline;
+}
+
+.doctor-patient-detail-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.doctor-patient-detail-icon {
+  color: var(--primary-blue);
+  margin-bottom: 16px;
+}
+
+.doctor-patient-detail-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+}
+
+.doctor-patient-detail-message {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* Doctor Profile Details Page */
 .profile-container {
   max-width: 900px;
