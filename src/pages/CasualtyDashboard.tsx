@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Phone, Activity, AlertCircle, Ambulance, HeartPulse } from 'lucide-react';
+import { Search, Phone, Activity, AlertCircle, Ambulance, HeartPulse, Navigation } from 'lucide-react';
 
 const CasualtyDashboard = () => {
     const navigate = useNavigate();
@@ -178,10 +178,19 @@ const CasualtyDashboard = () => {
                                     ))}
                                 </div>
 
-                                <button style={{ width: '100%', backgroundColor: '#dc2626', color: 'white', padding: '1rem', borderRadius: '0.75rem', border: 'none', fontWeight: 'bold', fontSize: '1rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                                    <Phone size={20} />
-                                    Contact Hospital
-                                </button>
+                                <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+                                    <button style={{ flex: 1, backgroundColor: '#dc2626', color: 'white', padding: '0.75rem', borderRadius: '0.75rem', border: 'none', fontWeight: 'bold', fontSize: '0.9rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                                        <Phone size={18} />
+                                        Call
+                                    </button>
+                                    <button
+                                        onClick={() => navigate('/transport-assistance', { state: { hospital, casualtyType } })}
+                                        style={{ flex: 2, backgroundColor: '#1e40af', color: 'white', padding: '0.75rem', borderRadius: '0.75rem', border: 'none', fontWeight: 'bold', fontSize: '0.9rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+                                    >
+                                        <Navigation size={18} />
+                                        Navigate & Assist
+                                    </button>
+                                </div>
                             </div>
                         ))}
                     </div>

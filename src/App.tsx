@@ -14,6 +14,7 @@ import BookAppointment from './pages/BookAppointment';
 import MyAppointments from './pages/MyAppointments';
 import CasualtyDashboard from './pages/CasualtyDashboard';
 import EmergencyCaseEntry from './pages/EmergencyCaseEntry';
+import TransportAssistance from './pages/TransportAssistance';
 import './index.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/admin/logs" element={<StatusLogs />} />
         <Route path="/casualty-dashboard" element={<CasualtyDashboard />} />
         <Route path="/emergency-case-entry" element={<EmergencyCaseEntry />} />
+        <Route path="/transport-assistance" element={<TransportAssistance />} />
         {/* Redirect root to login for now */}
         <Route path="/" element={<Navigate to="/login" replace />} />
       </Routes>
