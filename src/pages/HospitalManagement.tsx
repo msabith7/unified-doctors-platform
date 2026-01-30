@@ -26,7 +26,7 @@ interface Hospital {
 
 const HospitalManagement = () => {
     const sidebarItems = [
-        { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard', path: '/admin-dashboard' },
+        { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard', path: '/hospital-dashboard' },
         { icon: Building2, label: 'Hospital Management', id: 'hospitals', path: '/admin/hospitals' },
         { icon: UserCheck, label: 'Manage Doctors', id: 'doctors', path: '/admin/doctors' },
         { icon: ScrollText, label: 'Status Logs', id: 'logs', path: '/admin/logs' },
