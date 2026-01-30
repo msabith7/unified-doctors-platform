@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --primary-blue: #2563eb;
   --secondary-blue: #3b82f6;
   --bg-blue: #f0f7ff;
@@ -1206,6 +1206,128 @@ td {
 .empty-state-icon {
   margin-bottom: 20px;
   opacity: 0.3;
+}
+
+/* Patient Records – Consultation History */
+.records-page {
+  max-width: 800px;
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.record-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.2s;
+}
+
+.record-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.record-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.record-doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 6px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.record-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.record-meta-item svg {
+  flex-shrink: 0;
+  color: var(--primary-blue);
+}
+
+.record-disease,
+.record-prescription {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.record-section-icon {
+  flex-shrink: 0;
+  color: var(--primary-blue);
+  margin-top: 2px;
+}
+
+.record-section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.record-disease-text {
+  font-size: 0.9375rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.record-prescription {
+  background: var(--bg-blue);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.record-medicines-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.record-medicine-item {
+  font-size: 0.9375rem;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.record-medicine-name {
+  font-weight: 600;
+}
+
+.record-medicine-detail {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
 }
 
 /* Doctor Profile Details Page */

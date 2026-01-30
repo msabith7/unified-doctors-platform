@@ -12,6 +12,7 @@ import StatusLogs from './pages/StatusLogs';
 import DoctorDetails from './pages/DoctorDetails';
 import BookAppointment from './pages/BookAppointment';
 import MyAppointments from './pages/MyAppointments';
+import PatientRecords from './pages/PatientRecords';
 import CasualtyDashboard from './pages/CasualtyDashboard';
 import EmergencyCaseEntry from './pages/EmergencyCaseEntry';
 import TransportAssistance from './pages/TransportAssistance';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/doctor/:id" element={<DoctorDetails />} />
         <Route path="/book-appointment/:id" element={<BookAppointment />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
+        <Route path="/patient-records" element={<PatientRecords />} />
         <Route path="/hospital-dashboard" element={<HospitalDashboard />} />
         <Route path="/admin/hospitals" element={<HospitalManagement />} />
         <Route path="/admin/doctors" element={<DoctorManagement />} />

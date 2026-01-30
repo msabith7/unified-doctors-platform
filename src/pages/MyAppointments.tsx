@@ -12,7 +12,7 @@ const MyAppointments = () => {
         { icon: Search, label: 'Find a Doctor', id: 'find', path: '/patient-dashboard' },
         { icon: Calendar, label: 'My Appointments', id: 'appointments', path: '/my-appointments' },
         { icon: Heart, label: 'My Health', id: 'health', path: '#' },
-        { icon: FileText, label: 'Records', id: 'records', path: '#' },
+        { icon: FileText, label: 'Records', id: 'records', path: '/patient-records' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 
