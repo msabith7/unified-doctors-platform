@@ -5,7 +5,7 @@ import DoctorDashboard from './pages/DoctorDashboard';
 import DoctorAppointments from './pages/DoctorAppointments';
 import DoctorProfile from './pages/DoctorProfile';
 import PatientDashboard from './pages/PatientDashboard';
-import AdminDashboard from './pages/AdminDashboard';
+import HospitalDashboard from './pages/HospitalDashboard';
 import HospitalManagement from './pages/HospitalManagement';
 import DoctorManagement from './pages/DoctorManagement';
 import StatusLogs from './pages/StatusLogs';
@@ -30,7 +30,7 @@ function App() {
         <Route path="/doctor/:id" element={<DoctorDetails />} />
         <Route path="/book-appointment/:id" element={<BookAppointment />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/hospital-dashboard" element={<HospitalDashboard />} />
         <Route path="/admin/hospitals" element={<HospitalManagement />} />
         <Route path="/admin/doctors" element={<DoctorManagement />} />
         <Route path="/admin/logs" element={<StatusLogs />} />
