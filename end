@@ -1,0 +1,71 @@
+[33mcommit f4efb4f14d7ec1a789354b904b19bb4d7f8580b9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mcasuality[m[33m)[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Fri Jan 30 09:57:32 2026 +0530
+
+    casuality option added
+
+[33mcommit 31d9d45c3fa607e1b32fba7235f377d24ea6db78[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Thu Jan 29 00:03:09 2026 +0530
+
+    admin UI updated
+
+[33mcommit abf4c165d0744992ea9d863eebb90a287f7e7636[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 23:26:20 2026 +0530
+
+    patienUI My Appointments
+
+[33mcommit 0aaf86eb0118c6f98039254647431fa390f2f1fc[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 18:38:06 2026 +0530
+
+    AdminUI  Admin Dashboard with stat cards
+
+[33mcommit b660b3eea29b25ded9e3bbc73053c5c986c88f58[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 18:33:19 2026 +0530
+
+    doctor UI Doctor Profile Screen
+
+[33mcommit 072b32e85f4e18f0cc2c923353e28f25a4ee9497[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 18:22:44 2026 +0530
+
+    userUI book appointment
+
+[33mcommit 200153aed4544c87765bf016d5871d611a853f63[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 17:54:12 2026 +0530
+
+    Doctor Appointments Screen
+
+[33mcommit aacc919adc9b4321b724db6945e6911060f42adc[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 17:34:40 2026 +0530
+
+    Doctor Search Page
+
+[33mcommit 2a47d1ae26aafeabdbf265bd74ff95943f298e2a[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 17:23:00 2026 +0530
+
+    Surgery Start Form
+
+[33mcommit f0367f1d80cb121f358b2483df2dae42cf3a5ac5[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 16:53:17 2026 +0530
+
+    role based dashboard and doctor dashboard implemented
+
+[33mcommit 00f1ed616db8973c987fdbe1e890c11ba41d11e3[m
+Author: msabith7 <sabithsathar@gmail.com>
+Date:   Wed Jan 28 15:37:48 2026 +0530
+
+    dash board and a login page
+
+[33mcommit b316b6002f5560be55d2301a6b0ccdfb7df5bfdb[m
+Author: msabith7 <168836543+msabith7@users.noreply.github.com>
+Date:   Wed Jan 28 15:46:53 2026 +0530
+
+    Initial commit
