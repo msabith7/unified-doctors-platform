@@ -124,7 +124,7 @@ const DoctorManagement = () => {
                                     <tr key={doc.id}>
                                         <td style={{ fontWeight: '600', display: 'flex', alignItems: 'center', gap: '8px' }}>
                                             {doc.name}
-                                            {doc.verified && <Shield size={14} color="#2563eb" fill="#2563eb" />}
+                                            {doc.verified && <Shield size={14} color="var(--primary)" fill="var(--primary)" />}
                                         </td>
                                         <td>{doc.specialization}</td>
                                         <td>{doc.hospital}</td>

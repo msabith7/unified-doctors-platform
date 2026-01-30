@@ -68,7 +68,7 @@ const HospitalDashboard = () => {
                 <main className="content">
                     {/* Stats Grid */}
                     <div className="dashboard-grid">
-                        <StatCard label="Total Doctors" value="248" icon={UserCheck} color="#2563eb" />
+                        <StatCard label="Total Doctors" value="248" icon={UserCheck} color="var(--primary)" />
                         <StatCard label="Active Doctors Now" value="142" icon={Activity} color="#10b981" />
                         <StatCard label="Live Causalities" value={casualtyCases.filter(c => c.status !== 'Resolved').length.toString()} icon={Ambulance} color="#dc2626" />
                         <StatCard label="Appointments Today" value="48" icon={Calendar} color="#f59e0b" />
@@ -142,7 +142,7 @@ const HospitalDashboard = () => {
                                                             <button
                                                                 onClick={() => setShowAssignModal(showAssignModal === c.id ? null : c.id)}
                                                                 style={{
-                                                                    backgroundColor: '#2563eb',
+                                                                    backgroundColor: 'var(--primary)',
                                                                     color: 'white',
                                                                     border: 'none',
                                                                     padding: '0.5rem 0.75rem',

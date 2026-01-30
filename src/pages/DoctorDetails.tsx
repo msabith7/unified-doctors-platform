@@ -101,14 +101,14 @@ const DoctorDetails = () => {
 
                             <div style={{ display: 'flex', gap: '16px', marginBottom: '24px' }}>
                                 <div className="meta-item" style={{ flex: 1, padding: '16px', background: '#f8fafc', borderRadius: '12px' }}>
-                                    <MapPin size={20} className="icon" style={{ color: 'var(--primary-blue)' }} />
+                                    <MapPin size={20} className="icon" style={{ color: 'var(--primary)' }} />
                                     <div>
                                         <div style={{ fontWeight: '600', color: 'var(--text-dark)' }}>Location</div>
                                         <div style={{ fontSize: '0.875rem' }}>{doctor.address}</div>
                                     </div>
                                 </div>
                                 <div className="meta-item" style={{ flex: 1, padding: '16px', background: '#f8fafc', borderRadius: '12px' }}>
-                                    <Clock size={20} className="icon" style={{ color: 'var(--primary-blue)' }} />
+                                    <Clock size={20} className="icon" style={{ color: 'var(--primary)' }} />
                                     <div>
                                         <div style={{ fontWeight: '600', color: 'var(--text-dark)' }}>Working Hours</div>
                                         <div style={{ fontSize: '0.875rem' }}>09:00 AM - 05:00 PM</div>

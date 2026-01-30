@@ -108,7 +108,7 @@ const BookAppointment = () => {
                         <div className="doctor-summary-card">
                             <img src={doctor.avatar} alt={doctor.name} className="summary-avatar" />
                             <div className="summary-info">
-                                <div style={{ fontSize: '0.875rem', color: 'var(--primary-blue)', fontWeight: '600', marginBottom: '2px' }}>Booking with</div>
+                                <div style={{ fontSize: '0.875rem', color: 'var(--primary)', fontWeight: '600', marginBottom: '2px' }}>Booking with</div>
                                 <h3>{doctor.name}</h3>
                                 <div style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>{doctor.specialty} • {doctor.hospital}</div>
                             </div>
@@ -117,7 +117,7 @@ const BookAppointment = () => {
                         <div className="booking-form-card">
                             <section className="form-section">
                                 <div className="form-section-title">
-                                    <Calendar size={20} color="var(--primary-blue)" />
+                                    <Calendar size={20} color="var(--primary)" />
                                     Select Date
                                 </div>
                                 <div className="date-grid">
@@ -136,7 +136,7 @@ const BookAppointment = () => {
 
                             <section className="form-section">
                                 <div className="form-section-title">
-                                    <Clock size={20} color="var(--primary-blue)" />
+                                    <Clock size={20} color="var(--primary)" />
                                     Select Time Slot
                                 </div>
                                 <div className="slots-grid">
@@ -154,7 +154,7 @@ const BookAppointment = () => {
 
                             <section className="form-section">
                                 <div className="form-section-title">
-                                    <MessageSquare size={20} color="var(--primary-blue)" />
+                                    <MessageSquare size={20} color="var(--primary)" />
                                     Reason for Visit
                                 </div>
                                 <textarea

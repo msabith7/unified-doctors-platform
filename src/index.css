@@ -1,35 +1,49 @@
+/* Standard hospital / healthcare theme */
 :root {
-  --primary-blue: #2563eb;
-  --secondary-blue: #3b82f6;
-  --bg-blue: #f0f7ff;
-  --text-dark: #1e293b;
-  --text-muted: #64748b;
+  /* Primary: medical teal – trust, cleanliness, healthcare */
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --primary-light: #ccfbf1;
+  /* Neutral background – clinical, clean */
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-subtle: #f8fafc;
+  /* Legacy names for compatibility */
+  --primary-blue: #0d9488;
+  --secondary-blue: #0f766e;
+  --bg-blue: #f0fdfa;
+  /* Text – high contrast, readable */
+  --text-dark: #0f172a;
+  --text-muted: #475569;
   --white: #ffffff;
-  --success: #10b981;
+  /* Semantic */
+  --success: #059669;
   --border: #e2e8f0;
-  --radius-lg: 16px;
-  --radius-md: 12px;
+  --radius-lg: 12px;
+  --radius-md: 8px;
   --sidebar-width: 260px;
   --header-height: 70px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --emergency: #f97316;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  --warning: #d97706;
+  --danger: #dc2626;
+  --emergency: #ea580c;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background-color: var(--bg-blue);
+  background-color: var(--bg-page);
   color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .app-container {
@@ -54,7 +68,7 @@ body {
   align-items: center;
   gap: 12px;
   margin-bottom: 40px;
-  color: var(--primary-blue);
+  color: var(--primary);
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -81,7 +95,7 @@ body {
 .nav-item:hover,
 .nav-item.active {
   background: var(--bg-blue);
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 /* Main Content Wrapper */
@@ -153,10 +167,10 @@ body {
 }
 
 .stat-icon {
-  background: var(--bg-blue);
+  background: var(--primary-light);
   padding: 12px;
   border-radius: var(--radius-md);
-  color: var(--primary-blue);
+  color: var(--primary);
   transition: transform 0.3s ease;
 }
 
@@ -193,9 +207,10 @@ table {
 th {
   text-align: left;
   padding: 16px 24px;
-  background: #f8fafc;
+  background: var(--bg-subtle);
   color: var(--text-muted);
   font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -225,8 +240,8 @@ td {
 
 .status-badge.in-surgery,
 .status-badge.blue {
-  background: #dbeafe;
-  color: #1e40af;
+  background: var(--primary-light);
+  color: var(--primary-hover);
 }
 
 .status-badge.inactive,
@@ -347,7 +362,7 @@ td {
 .action-btn:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-blue);
+  border-color: var(--primary);
 }
 
 .action-btn svg {
@@ -361,7 +376,7 @@ td {
 }
 
 .action-btn.primary {
-  background: var(--primary-blue);
+  background: var(--primary);
   color: var(--white);
   border: none;
 }
@@ -371,7 +386,7 @@ td {
 }
 
 .action-btn.primary:hover {
-  background: var(--secondary-blue);
+  background: var(--primary-hover);
 }
 
 .action-btn.danger {
@@ -393,7 +408,7 @@ td {
 .auth-container {
   min-height: 100vh;
   display: flex;
-  background: linear-gradient(135deg, #f0f7ff 0%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f0fdfa 0%, #f1f5f9 100%);
 }
 
 .auth-card {
@@ -420,8 +435,8 @@ td {
 
 .auth-visual {
   flex: 1;
-  background: var(--primary-blue);
-  background-image: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&q=80');
+  background: var(--primary);
+  background-image: linear-gradient(rgba(13, 148, 136, 0.92), rgba(15, 118, 110, 0.9)), url('https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&q=80');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -462,8 +477,8 @@ td {
 }
 
 .search-input-wrapper input:focus {
-  border-color: var(--primary-blue);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.12);
 }
 
 .search-icon {
@@ -518,7 +533,7 @@ td {
 .doctor-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-blue);
+  border-color: var(--primary);
 }
 
 .doctor-card-info {
@@ -615,12 +630,12 @@ td {
   border: none;
   cursor: pointer;
   transition: all 0.2s;
-  background: var(--primary-blue);
+  background: var(--primary);
   color: var(--white);
 }
 
 .book-btn:hover:not(:disabled) {
-  background: var(--secondary-blue);
+  background: var(--primary-hover);
 }
 
 .book-btn:disabled {
@@ -677,12 +692,12 @@ td {
 
 .auth-logo h1 {
   font-size: 1.75rem;
-  color: var(--primary-blue);
+  color: var(--primary);
   font-weight: 800;
 }
 
 .primary-icon {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .auth-subtitle {
@@ -716,7 +731,7 @@ td {
 
 .role-tab.active {
   background: var(--white);
-  color: var(--primary-blue);
+  color: var(--primary);
   box-shadow: var(--shadow-sm);
 }
 
@@ -774,7 +789,7 @@ td {
 
 .input-wrapper input:focus,
 .input-wrapper select:focus {
-  border-color: var(--primary-blue);
+  border-color: var(--primary);
 }
 
 .auth-actions {
@@ -785,13 +800,13 @@ td {
 }
 
 .forgot-link {
-  color: var(--primary-blue);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
 }
 
 .btn-primary {
-  background: var(--primary-blue);
+  background: var(--primary);
   color: var(--white);
   padding: 14px 24px;
   border: none;
@@ -807,7 +822,7 @@ td {
 }
 
 .btn-primary:hover {
-  background: var(--secondary-blue);
+  background: var(--primary-hover);
   transform: translateY(-1px);
 }
 
@@ -823,7 +838,7 @@ td {
 }
 
 .auth-footer a {
-  color: var(--primary-blue);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
 }
@@ -840,7 +855,7 @@ td {
 }
 
 .back-link:hover {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 /* Checkbox Styles */
@@ -877,8 +892,8 @@ td {
 }
 
 .checkbox-container input:checked~.checkmark {
-  background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .checkmark:after {
@@ -1082,7 +1097,7 @@ td {
 }
 
 .tab-item.active {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .tab-item.active::after {
@@ -1092,7 +1107,7 @@ td {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--primary-blue);
+  background: var(--primary);
   border-radius: 2px;
 }
 
@@ -1136,8 +1151,8 @@ td {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #eff6ff;
-  color: #3b82f6;
+  background: var(--primary-light);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1166,7 +1181,7 @@ td {
 }
 
 .apt-detail-item .icon {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .apt-actions {
@@ -1225,7 +1240,7 @@ td {
   padding: 24px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--primary-blue);
+  border-left: 4px solid var(--primary);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1266,7 +1281,7 @@ td {
 
 .record-meta-item svg {
   flex-shrink: 0;
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .record-disease,
@@ -1278,7 +1293,7 @@ td {
 
 .record-section-icon {
   flex-shrink: 0;
-  color: var(--primary-blue);
+  color: var(--primary);
   margin-top: 2px;
 }
 
@@ -1365,7 +1380,7 @@ td {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: var(--primary-blue);
+  background: var(--primary);
   color: var(--white);
   border: none;
   border-radius: var(--radius-md);
@@ -1377,7 +1392,7 @@ td {
 }
 
 .btn-upload-reports:hover {
-  background: var(--secondary-blue);
+  background: var(--primary-hover);
   box-shadow: var(--shadow-md);
 }
 
@@ -1422,7 +1437,7 @@ td {
 }
 
 .test-report-icon {
-  color: var(--primary-blue);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
@@ -1485,7 +1500,7 @@ td {
 }
 
 .test-report-results-label svg {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 .test-results-table {
@@ -1548,7 +1563,7 @@ td {
 
 .profile-cover {
   height: 160px;
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
 }
 
 .profile-main-info {
@@ -1592,8 +1607,8 @@ td {
 .profile-specialty-badge {
   display: inline-flex;
   padding: 6px 16px;
-  background: var(--bg-blue);
-  color: var(--primary-blue);
+  background: var(--primary-light);
+  color: var(--primary);
   border-radius: 20px;
   font-weight: 600;
   font-size: 0.875rem;
@@ -1629,7 +1644,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-blue);
+  color: var(--primary);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1680,7 +1695,7 @@ td {
 }
 
 .back-btn-top:hover {
-  color: var(--primary-blue);
+  color: var(--primary);
 }
 
 /* Booking Screen Styles */
@@ -1764,10 +1779,10 @@ td {
 }
 
 .date-chip.active {
-  background: var(--primary-blue);
+  background: var(--primary);
   color: var(--white);
-  border-color: var(--primary-blue);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
 }
 
 .date-chip .day-name {
@@ -1801,15 +1816,15 @@ td {
 }
 
 .slot-chip:hover:not(.unavailable) {
-  border-color: var(--primary-blue);
-  color: var(--primary-blue);
+  border-color: var(--primary);
+  color: var(--primary);
   background: var(--bg-blue);
 }
 
 .slot-chip.active {
-  background: var(--primary-blue);
+  background: var(--primary);
   color: var(--white);
-  border-color: var(--primary-blue);
+  border-color: var(--primary);
 }
 
 .slot-chip.unavailable {
@@ -1832,8 +1847,8 @@ td {
 }
 
 .reason-textarea:focus {
-  border-color: var(--primary-blue);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.12);
 }
 
 /* Doctor Professional Profile Styles */
@@ -1863,14 +1878,14 @@ td {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #f1f5f9;
+  background: var(--bg-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-blue);
+  color: var(--primary);
   font-size: 2.5rem;
   font-weight: 700;
-  border: 4px solid var(--bg-blue);
+  border: 4px solid var(--primary-light);
 }
 
 .doctor-info-text h2 {
@@ -1908,11 +1923,11 @@ td {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: #f8fafc;
+  background: var(--bg-subtle);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-blue);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
@@ -1954,7 +1969,7 @@ td {
   content: '';
   width: 6px;
   height: 6px;
-  background: var(--primary-blue);
+  background: var(--primary);
   border-radius: 50%;
 }
 

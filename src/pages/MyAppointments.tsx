@@ -92,7 +92,7 @@ const MyAppointments = () => {
                                         <div className="apt-actions">
                                             {activeTab === 'upcoming' ? (
                                                 <>
-                                                    <button className="btn-complete" style={{ background: 'var(--bg-blue)', color: 'var(--primary-blue)', border: '1px solid #dbeafe' }}>
+                                                    <button className="btn-complete" style={{ background: 'var(--primary-light)', color: 'var(--primary)', border: '1px solid var(--primary)' }}>
                                                         <FileText size={16} /> Reschedule
                                                     </button>
                                                     <button className="btn-complete" style={{ background: '#fff1f2', color: 'var(--danger)', border: '1px solid #fecaca' }}>

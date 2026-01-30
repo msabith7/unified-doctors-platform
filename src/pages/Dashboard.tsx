@@ -79,7 +79,7 @@ const Dashboard = () => {
                 <Header />
                 <main className="content">
                     <div className="dashboard-grid">
-                        <StatCard label="Total Doctors" value="124" icon={Users} color="#2563eb" />
+                        <StatCard label="Total Doctors" value="124" icon={Users} color="var(--primary)" />
                         <StatCard label="Available Now" value="48" icon={Stethoscope} color="#10b981" />
                         <StatCard label="Appointments Today" value="32" icon={Calendar} color="#f59e0b" />
                         <StatCard label="Avg. Wait Time" value="15 min" icon={Clock} color="#6366f1" />
@@ -90,7 +90,7 @@ const Dashboard = () => {
                             <h2 className="card-title">Doctor Availability Overview</h2>
                             <button style={{
                                 padding: '8px 16px',
-                                background: '#2563eb',
+                                background: 'var(--primary)',
                                 color: 'white',
                                 border: 'none',
                                 borderRadius: '8px',

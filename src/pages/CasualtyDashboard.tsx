@@ -159,7 +159,7 @@ const CasualtyDashboard = () => {
 
                                 <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
                                     <div style={{ flex: 1, backgroundColor: '#eff6ff', padding: '0.75rem', borderRadius: '0.5rem' }}>
-                                        <p style={{ margin: 0, fontSize: '0.75rem', color: '#1e40af' }}>ICU Beds</p>
+                                        <p style={{ margin: 0, fontSize: '0.75rem', color: 'var(--primary)' }}>ICU Beds</p>
                                         <p style={{ margin: 0, fontSize: '1.125rem', fontWeight: 'bold', color: '#1e3a8a' }}>{hospital.icuCount}</p>
                                     </div>
                                     <div style={{ flex: 1, backgroundColor: '#fff7ed', padding: '0.75rem', borderRadius: '0.5rem' }}>
@@ -185,7 +185,7 @@ const CasualtyDashboard = () => {
                                     </button>
                                     <button
                                         onClick={() => navigate('/transport-assistance', { state: { hospital, casualtyType } })}
-                                        style={{ flex: 2, backgroundColor: '#1e40af', color: 'white', padding: '0.75rem', borderRadius: '0.75rem', border: 'none', fontWeight: 'bold', fontSize: '0.9rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+                                        style={{ flex: 2, backgroundColor: 'var(--primary)', color: 'white', padding: '0.75rem', borderRadius: '0.75rem', border: 'none', fontWeight: 'bold', fontSize: '0.9rem', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
                                     >
                                         <Navigation size={18} />
                                         Navigate & Assist

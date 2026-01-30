@@ -109,7 +109,7 @@ const DoctorDashboard = () => {
                             <span>Mark On Leave</span>
                         </button>
                         <button className="action-btn" onClick={() => updateStatus('Available', 'green')}>
-                            <UserCheck color="#2563eb" />
+                            <UserCheck color="var(--primary)" />
                             <span>Mark Available</span>
                         </button>
                         <button className="action-btn danger" onClick={() => updateStatus('Emergency', 'orange')}>
@@ -119,7 +119,7 @@ const DoctorDashboard = () => {
                     </div>
 
                     <div className="dashboard-grid">
-                        <StatCard label="Today's Appointments" value="8" icon={Calendar} color="#2563eb" />
+                        <StatCard label="Today's Appointments" value="8" icon={Calendar} color="var(--primary)" />
                         <StatCard label="Pending Requests" value="3" icon={Clock} color="#f59e0b" />
                         <StatCard label="Completed Today" value="5" icon={CheckCircle} color="#10b981" />
                         <StatCard label="Emergency" value="0" icon={AlertCircle} color="#ef4444" />
