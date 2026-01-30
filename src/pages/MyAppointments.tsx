@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Calendar, MapPin, Clock, Ban, CheckCircle2 } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
-import { Home, Search, Heart, FileText, Settings } from 'lucide-react';
+import { Home, Search, Heart, FileText, Settings, ClipboardList } from 'lucide-react';
 
 const MyAppointments = () => {
     const [activeTab, setActiveTab] = useState<'upcoming' | 'completed'>('upcoming');
@@ -13,6 +13,7 @@ const MyAppointments = () => {
         { icon: Calendar, label: 'My Appointments', id: 'appointments', path: '/my-appointments' },
         { icon: Heart, label: 'My Health', id: 'health', path: '#' },
         { icon: FileText, label: 'Records', id: 'records', path: '/patient-records' },
+        { icon: ClipboardList, label: 'Test Reports', id: 'test-reports', path: '/patient-test-reports' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 

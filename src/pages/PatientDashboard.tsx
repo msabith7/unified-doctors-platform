@@ -1,4 +1,4 @@
-import { Home, Search, Heart, FileText, Settings, Calendar, User, Activity, MapPin, Clock } from 'lucide-react';
+import { Home, Search, Heart, FileText, Settings, Calendar, User, Activity, MapPin, Clock, ClipboardList } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
@@ -16,6 +16,7 @@ const PatientDashboard = () => {
         { icon: Calendar, label: 'My Appointments', id: 'appointments', path: '/my-appointments' },
         { icon: Heart, label: 'My Health', id: 'health', path: '#' },
         { icon: FileText, label: 'Records', id: 'records', path: '/patient-records' },
+        { icon: ClipboardList, label: 'Test Reports', id: 'test-reports', path: '/patient-test-reports' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 

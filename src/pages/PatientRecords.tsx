@@ -1,4 +1,4 @@
-import { Home, Search, Heart, FileText, Settings, Calendar, MapPin, Clock, Stethoscope, Pill } from 'lucide-react';
+import { Home, Search, Heart, FileText, Settings, Calendar, MapPin, Clock, Stethoscope, Pill, ClipboardList } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 
@@ -25,6 +25,7 @@ const PatientRecords = () => {
         { icon: Calendar, label: 'My Appointments', id: 'appointments', path: '/my-appointments' },
         { icon: Heart, label: 'My Health', id: 'health', path: '#' },
         { icon: FileText, label: 'Records', id: 'records', path: '/patient-records' },
+        { icon: ClipboardList, label: 'Test Reports', id: 'test-reports', path: '/patient-test-reports' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
 
