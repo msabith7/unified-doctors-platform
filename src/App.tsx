@@ -4,6 +4,7 @@ import Register from './pages/Register';
 import DoctorDashboard from './pages/DoctorDashboard';
 import DoctorAppointments from './pages/DoctorAppointments';
 import DoctorProfile from './pages/DoctorProfile';
+import ConsultationLog from './pages/ConsultationLog';
 import PatientDashboard from './pages/PatientDashboard';
 import HospitalDashboard from './pages/HospitalDashboard';
 import HospitalManagement from './pages/HospitalManagement';
@@ -13,6 +14,7 @@ import DoctorDetails from './pages/DoctorDetails';
 import BookAppointment from './pages/BookAppointment';
 import MyAppointments from './pages/MyAppointments';
 import PatientRecords from './pages/PatientRecords';
+import PatientTestReports from './pages/PatientTestReports';
 import CasualtyDashboard from './pages/CasualtyDashboard';
 import EmergencyCaseEntry from './pages/EmergencyCaseEntry';
 import TransportAssistance from './pages/TransportAssistance';
@@ -27,11 +29,13 @@ function App() {
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/doctor-appointments" element={<DoctorAppointments />} />
         <Route path="/doctor-profile" element={<DoctorProfile />} />
+        <Route path="/doctor-consultations" element={<ConsultationLog />} />
         <Route path="/patient-dashboard" element={<PatientDashboard />} />
         <Route path="/doctor/:id" element={<DoctorDetails />} />
         <Route path="/book-appointment/:id" element={<BookAppointment />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/patient-records" element={<PatientRecords />} />
+        <Route path="/patient-test-reports" element={<PatientTestReports />} />
         <Route path="/hospital-dashboard" element={<HospitalDashboard />} />
         <Route path="/admin/hospitals" element={<HospitalManagement />} />
         <Route path="/admin/doctors" element={<DoctorManagement />} />

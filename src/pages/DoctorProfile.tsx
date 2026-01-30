@@ -17,10 +17,10 @@ import Header from '../components/Header';
 const DoctorProfile = () => {
     // Mock data for the doctor profile
     const doctorData = {
-        name: "Dr. Sabith Sathar",
+        name: "Dr. Robert",
         specialization: "General Surgeon",
         experience: "10+ Years",
-        email: "sabith.sathar@unidoc.com",
+        email: "robert@unidoc.com",
         phone: "+91 98765 43210",
         hospitals: [
             "City General Hospital",
@@ -34,7 +34,7 @@ const DoctorProfile = () => {
         { icon: LayoutDashboard, label: 'Dashboard', id: 'dashboard', path: '/doctor-dashboard' },
         { icon: Calendar, label: 'Appointments', id: 'appointments', path: '/doctor-appointments' },
         { icon: Users, label: 'Patients', id: 'patients', path: '#' },
-        { icon: MessageSquare, label: 'Consultations', id: 'consultations', path: '#' },
+        { icon: MessageSquare, label: 'Consultations', id: 'consultations', path: '/doctor-consultations' },
         { icon: UserCircle, label: 'Profile', id: 'profile', path: '/doctor-profile' },
         { icon: Settings, label: 'Settings', id: 'settings', path: '#' },
     ];
