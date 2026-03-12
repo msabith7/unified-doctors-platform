@@ -1,16 +1,7 @@
-# Unified Doctors Platform
+The IoT-Enabled Real-Time Doctor Availability and Smart Emergency Routing System is a healthcare management platform designed to improve hospital coordination, doctor availability tracking, and emergency response efficiency.
 
-A modern healthcare web application layout called “Unified Doctor Availability System.”
+This system provides a centralized digital dashboard where doctors can update their real-time status (available, in surgery, emergency, off-duty), allowing patients to book appointments based on live availability. An IoT-based input mechanism in operation theatres enables automatic status updates when a doctor enters or exits a surgery, ensuring accurate and up-to-date information across the system.
 
-## Features
-- Dashboard with quick stats
-- Doctor Availability Overview
-- Authentication (Login/Register)
-- Modern SaaS look and feel
+A key feature of the platform is the Casualty/Emergency module designed for ambulance drivers and emergency responders. In critical situations such as accidents or cardiac emergencies, the system helps identify the nearest and most suitable hospital based on real-time facility availability, ICU capacity, and specialist readiness. Hospitals and doctors receive instant alerts, enabling them to prepare before the patient arrives.
 
-## Tech Stack
-- React
-- TypeScript
-- Vite
-- Lucide React
-- React Router
+The platform includes role-based access for doctors, patients, administrators, and casualty staff, along with features like appointment scheduling, emergency case tracking, notifications, and hospital facility management. By combining IoT integration, real-time data sharing, and smart emergency routing, the system aims to reduce treatment delays, improve hospital resource utilization, and enhance overall patient care.
